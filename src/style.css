@@ -123,9 +123,31 @@ body {
     line-height: 1.2;
     padding-block-end: 80px;
 }
+
+h1 {
+  font-family: "Bricolage Grotesque", Arial, Helvetica, sans-serif;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  width: 100%;
+  border: none;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr calc(100% - 32px) 1fr;
+
+  @media (width >= calc(700 / 16 * 1rem)) {}
+}
 }
 
 
 
+@layer component {
 
+}
 
