@@ -168,6 +168,28 @@
       border: 2px solid var(--color-text-light);
     }
   }
+
+  .main {
+    display: grid;
+    row-gap: 32px;
+  }
+
+  .dashboard {
+    display: grid;
+    gap: 32px;
+    grid-template-areas: 
+      "current" 
+      "daily" 
+      "hourly";
+    
+      @media (width >= calc(1000 / 16 * 1rem)) {
+        gap: 48px 32px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+          "current current hourly" 
+          "daily daily hourly";
+      }
+  }
 }
 
 
