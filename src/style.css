@@ -1,148 +1,154 @@
 @layer global {
 
-/* dm-sans-regular - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 400;
-  src: url('C:\Mbuso\Computer Science\GitHub Projects\Weather App\Assets\fontsdm-sans-v17-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* dm-sans-500 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 500;
-  src: url('C:\Mbuso\Computer Science\GitHub Projects\Weather App\Assets\fontsdm-sans-v17-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* dm-sans-600 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 600;
-  src: url('C:\Mbuso\Computer Science\GitHub Projects\Weather App\Assets\fontsdm-sans-v17-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* dm-sans-600italic - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'DM Sans';
-    font-style: italic;
-    font-weight: 600;
-  src: url('C:\Mbuso\Computer Science\GitHub Projects\Weather App\Assets\fontsdm-sans-v17-latin-600italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* dm-sans-700 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 700;
-  src: url('C:\Mbuso\Computer Science\GitHub Projects\Weather App\Assets\fontsdm-sans-v17-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
+  /* dm-sans-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 400;
+    src: url('C:\Mbuso\Computer Science\GitHub Projects\Weather App\Assets\fontsdm-sans-v17-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* dm-sans-500 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 500;
+    src: url('C:\Mbuso\Computer Science\GitHub Projects\Weather App\Assets\fontsdm-sans-v17-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* dm-sans-600 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 600;
+    src: url('C:\Mbuso\Computer Science\GitHub Projects\Weather App\Assets\fontsdm-sans-v17-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* dm-sans-600italic - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+      font-family: 'DM Sans';
+      font-style: italic;
+      font-weight: 600;
+    src: url('C:\Mbuso\Computer Science\GitHub Projects\Weather App\Assets\fontsdm-sans-v17-latin-600italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* dm-sans-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 700;
+    src: url('C:\Mbuso\Computer Science\GitHub Projects\Weather App\Assets\fontsdm-sans-v17-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
 
-/* bricolage-grotesque-700 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Bricolage Grotesque';
-    font-style: normal;
-    font-weight: 700;
-  src: url('C:\Mbuso\Computer Science\GitHub Projects\Weather App\Assets\fontsbricolage-grotesque-v9-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
+  /* bricolage-grotesque-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+      font-family: 'Bricolage Grotesque';
+      font-style: normal;
+      font-weight: 700;
+    src: url('C:\Mbuso\Computer Science\GitHub Projects\Weather App\Assets\fontsbricolage-grotesque-v9-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
 
-:root {
-    --c-neutral-900: hsl(243, 96%, 9%);
-    --c-neutral-800: hsl(243, 27%, 20%);
-    --c-neutral-700: hsl(243, 23%, 24%);
-    --c-neutral-600: hsl(243, 23%, 30%);
-    --c-neutral-300: hsl(240, 6%, 70%);
-    --c-neutral-200: hsl(250, 6%, 84%);
-    --c-neutral-0: hsl(0, 0%, 100%);
-    --c-orange-500: hsl(28, 100%, 52%);
-    --c-blue-500: hsl(233, 67%, 56%);
-    --c-blue-700: hsl(248, 70%, 36%);
+  :root {
+      --c-neutral-900: hsl(243, 96%, 9%);
+      --c-neutral-800: hsl(243, 27%, 20%);
+      --c-neutral-700: hsl(243, 23%, 24%);
+      --c-neutral-600: hsl(243, 23%, 30%);
+      --c-neutral-300: hsl(240, 6%, 70%);
+      --c-neutral-200: hsl(250, 6%, 84%);
+      --c-neutral-0: hsl(0, 0%, 100%);
+      --c-orange-500: hsl(28, 100%, 52%);
+      --c-blue-500: hsl(233, 67%, 56%);
+      --c-blue-700: hsl(248, 70%, 36%);
 
-    --color-main-bg: var(--c-neutral-900);
-    --color-text-light: var(--c-neutral-0);
-    --color-text-med-light: var(--c-neutral-200);
-    --color-panel-bg-dark: var(--c-neutral-800);
-    --color-panel-bg-dark-hover: var(--c-neutral-700);
-    --color-panel-bg-med: var(--c-neutral-700);
-    --color-panel-bg-light: var(--c-neutral-600);
-    --color-panel-border: var(--c-neutral-600);
-    --color-button-bg: var(--c-blue-500);
-    --color-button-bg-hover: var(--c-blue-700);
+      --color-main-bg: var(--c-neutral-900);
+      --color-text-light: var(--c-neutral-0);
+      --color-text-med-light: var(--c-neutral-200);
+      --color-panel-bg-dark: var(--c-neutral-800);
+      --color-panel-bg-dark-hover: var(--c-neutral-700);
+      --color-panel-bg-med: var(--c-neutral-700);
+      --color-panel-bg-light: var(--c-neutral-600);
+      --color-panel-border: var(--c-neutral-600);
+      --color-button-bg: var(--c-blue-500);
+      --color-button-bg-hover: var(--c-blue-700);
 
-    --fs-96: calc(96 / 16 * 1rem);
-    --fs-52: calc(52 / 16 * 1rem);
-    --fs-32: calc(32 / 16 * 1rem);
-    --fs-28: calc(28 / 16 * 1rem);
-    --fs-20: calc(20 / 16 * 1rem);
-    --fs-18: calc(18 / 16 * 1rem);
-    --fs-16: calc(16 / 16 * 1rem);
-    --fs-14: calc(14 / 16 * 1rem);
+      --fs-96: calc(96 / 16 * 1rem);
+      --fs-52: calc(52 / 16 * 1rem);
+      --fs-32: calc(32 / 16 * 1rem);
+      --fs-28: calc(28 / 16 * 1rem);
+      --fs-20: calc(20 / 16 * 1rem);
+      --fs-18: calc(18 / 16 * 1rem);
+      --fs-16: calc(16 / 16 * 1rem);
+      --fs-14: calc(14 / 16 * 1rem);
 
-    --font-size-h1: var(--fs-52);
-    --font-size-dropdown: var(--fs-14);
-    --font-size-search: var(--fs-20);
-    --font-size-city: var(--fs-28);
-    --font-size-date: var(--fs-18);
-    --font-size-temp: var(--fs-96);
-    --font-size-panel-title: var(--fs-18);
-    --font-size-panel-value: var(--fs-32);
-    --font-size-forecast-title: var(--fs-20);
-    --font-size-forecast-day: var(--fs-18);
-    --font-size-forecast-temp: var(--fs-16);
-    --font-size-forecast-dropdown: var(--fs-16);
-    --font-size-forecast-hour: var(--fs-20);
+      --font-size-h1: var(--fs-52);
+      --font-size-dropdown: var(--fs-14);
+      --font-size-search: var(--fs-20);
+      --font-size-city: var(--fs-28);
+      --font-size-date: var(--fs-18);
+      --font-size-temp: var(--fs-96);
+      --font-size-panel-title: var(--fs-18);
+      --font-size-panel-value: var(--fs-32);
+      --font-size-forecast-title: var(--fs-20);
+      --font-size-forecast-day: var(--fs-18);
+      --font-size-forecast-temp: var(--fs-16);
+      --font-size-forecast-dropdown: var(--fs-16);
+      --font-size-forecast-hour: var(--fs-20);
 
-    @media (width >= calc(700 / 16 * rem)) {
-        --font-size-dropdown: var(--fs-16);
+      @media (width >= calc(700 / 16 * rem)) {
+          --font-size-dropdown: var(--fs-16);
+      } 
+  }
+
+  *, 
+  *::before,
+  *::after {
+      box-sizing:border-box;
+  }
+
+  * {
+      margin: 0;
+  }
+
+  img {
+      max-width: 100%;
+  }
+
+  body {
+      font-family: "DM Sans", Arial, Helvetica, sans-serif;
+      font-weight: 500;
+      background-color: var(--color-main-bg);
+      color: var(--color-text-light);
+      line-height: 1.2;
+      padding-block-end: 80px;
+  }
+
+  h1 {
+    font-family: "Bricolage Grotesque", Arial, Helvetica, sans-serif;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+    width: 100%;
+    border: none;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr calc(100% - 32px) 1fr;
+
+    @media (width >= calc(700 / 16 * 1rem)) {
+      grid-template-columns: 1fr min(calc(100% - 48px), calc(1216 / 16 * 1rem)) 1fr;
     }
-}
 
-*, 
-*::before,
-*::after {
-    box-sizing:border-box;
-}
-
-* {
-    margin: 0;
-}
-
-img {
-    max-width: 100%;
-}
-
-body {
-    font-family: "DM Sans", Arial, Helvetica, sans-serif;
-    font-weight: 500;
-    background-color: var(--color-main-bg);
-    color: var(--color-text-light);
-    line-height: 1.2;
-    padding-block-end: 80px;
-}
-
-h1 {
-  font-family: "Bricolage Grotesque", Arial, Helvetica, sans-serif;
-}
-
-input,
-button,
-textarea,
-select {
-  font: inherit;
-  width: 100%;
-  border: none;
-}
-
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr calc(100% - 32px) 1fr;
-
-  @media (width >= calc(700 / 16 * 1rem)) {}
-}
+    > * {
+      grid-column: 2;
+    }
+  }
 }
 
 
