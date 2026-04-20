@@ -294,6 +294,18 @@
       }
     }
   }
+
+  .current {
+    grid-area: current;
+
+    .current__weather { 
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-block-end: 20px;
+      padding: 40px 24px;
+    }
+  }
 }
 
 
