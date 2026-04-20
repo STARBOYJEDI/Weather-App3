@@ -380,6 +380,10 @@
       font-weight: 300;
     }
   }
+
+  .daily {
+    grid-area: daily;
+  }
 }
 
 
