@@ -488,6 +488,11 @@
       border-radius: 8px;
       min-height: calc(60 / 16 * 1rem);
     }
+
+    .hourly__hour-icon {
+      width: 40px;
+      height: auto;
+    }
   }
 }
 
