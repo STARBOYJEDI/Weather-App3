@@ -316,6 +316,8 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        background-image: url(/src/assets/icons/bg-today-large.svg);
+        padding-block: 83px;
       }
     }
   }
