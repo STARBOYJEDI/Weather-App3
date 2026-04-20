@@ -311,6 +311,12 @@
       background-position: center bottom;
       border-radius: 20px;
       overflow: clip;
+
+      @media (width >= calc(700 / 16 * 1rem)) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
     }
   }
 }
