@@ -431,6 +431,25 @@
       color: var(--color-text-med-light);
     }
   }
+
+  .hourly {
+    grid-area: hourly;
+    position: relative;
+
+    .hourly__content {
+      background-color: var(--color-panel-bg-dark);
+      border-radius: 20px;
+      padding: 20px 16px;
+      max-height: 60vh;
+      overflow-y: scroll;
+
+      @media (width >= calc(1000 / 16 * 1rem)) {
+        position: absolute;
+        height: 100%;
+        max-height: none;
+      }
+    }
+  }
 }
 
 
