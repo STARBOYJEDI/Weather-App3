@@ -304,6 +304,13 @@
       gap: 16px;
       margin-block-end: 20px;
       padding: 40px 24px;
+      background-image: url(/src/assets/icons/bg-today-small.svg);
+      background-repeat: no-repeat;
+      background-color: var(--c-blue-700);
+      background-size: cover;
+      background-position: center bottom;
+      border-radius: 20px;
+      overflow: clip;
     }
   }
 }
