@@ -209,17 +209,17 @@
 
 @layer component {
   .header {
-    .header_content {
+    .header__content {
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding-block-start: 16px;
     }
 
-    .header_homelink {
+    .header__homelink {
     }
 
-    .header_logo {
+    .header__logo {
       width: calc(137 / 16 * 1rem);
 
       @media (width >= calc(700 / 16 * 1rem)) {
@@ -227,7 +227,7 @@
       }
     }
 
-    .header_dropdown {
+    .header__dropdown {
       max-width: 10ch;
       background-image: url("/src/assets/icons/icon-units.svg");
       background-repeat: no-repeat;
@@ -237,13 +237,13 @@
   }
 
   .hero {
-    .hero_content {
+    .hero__content {
       display: grid;
       justify-items: center;
       padding-block-start: 48px;
     }
 
-    .hero_title {
+    .hero__title {
       font-size: var(--font-size-h1);
       margin-block-end: 48px;
       text-align: center;
@@ -254,7 +254,7 @@
       }
     }
 
-    .hero_search {
+    .hero__search {
       display: grid;
       gap: 12px 16px;
       width: 100%;
