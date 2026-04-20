@@ -399,6 +399,14 @@
         grid-template-columns: repeat(7, 1fr);
       }
     }
+
+    .daily__daily {
+      display: grid;
+      justify-items: center;
+      gap: 16px;
+      padding: 16px 10px;
+      text-align: center;
+    }
   }
 }
 
