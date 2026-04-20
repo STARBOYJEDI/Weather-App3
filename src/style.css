@@ -216,9 +216,9 @@
       padding-block-start: 16px;
     }
 
-    .header__homelink {
+    /*👉.header__homelink {
     }
-
+👈*/
     .header__logo {
       width: calc(137 / 16 * 1rem);
 
