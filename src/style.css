@@ -227,6 +227,21 @@
         width: calc(197 / 16 * 1rem);
       }
     }
+
+    .header_dropdown {
+      max-width: 10ch;
+      background-image: url("/src/assets/icons/icon-units.svg");
+      background-repeat: no-repeat;
+      background-position: 16px center;
+      padding: 12px 40px;
+    }
+  }
+
+  .hero {
+    .hero_content {
+      display: grid;
+      justify-items: center;
+    }
   }
 }
 
