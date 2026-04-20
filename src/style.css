@@ -320,6 +320,10 @@
         padding-block: 83px;
       }
     }
+
+    .current__location {
+      text-align: center;
+    }
   }
 }
 
