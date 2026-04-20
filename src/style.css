@@ -457,6 +457,17 @@
       align-items: center;
       margin-block-end: 16px;
     }
+
+    .hourly__title {
+      font-size: var(--font-size-forecast-title);
+      font-weight: 600;
+    }
+
+    .hourly__select {
+      background-color: var(--color-panel-bg-med);
+      width: auto;
+      padding: 8px 16px;
+    }
   }
 }
 
