@@ -407,6 +407,15 @@
       padding: 16px 10px;
       text-align: center;
     }
+
+    .daily__daily-title {
+      font-size: var(--font-size-forecast-day);
+    }
+
+    .daily__day-icon {
+      width: 60px;
+      height: auto;
+    }
   }
 }
 
