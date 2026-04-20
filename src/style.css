@@ -388,6 +388,17 @@
       font-size: var(--font-size-forecast-title);
       margin-block-end: 20px;
     }
+
+    .daily__forecast {
+      display: grid;
+      grid-template-columns: repeat((3, 1fr));
+      gap: 16px;
+      min-height: calc(166 / 16 * 1rem);
+
+      @media (width >= calc(700 / 16 * 1rem)) {
+        grid-template-columns: repeat(7, 1fr);
+      }
+    }
   }
 }
 
