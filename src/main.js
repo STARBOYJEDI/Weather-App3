@@ -16,6 +16,11 @@ async function getGeoData() {
 
         let lat = result[0].lat;
         let lon = result[0].lon;
+
+        loadLocationData(result);
+        getWeatherData(lat, lon);
+    } catch (error) {
+        console.error(error.message);
     }
 }
 
