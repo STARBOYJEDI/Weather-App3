@@ -424,8 +424,8 @@
       font-size: var(--font-size-forecast-temp);
     }
 
-    /*👉.daily__day-high {
-    }👈*/
+    .daily__day-high {
+    }
 
     .daily__day-low {
       color: var(--color-text-med-light);
