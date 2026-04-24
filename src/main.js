@@ -42,6 +42,17 @@ function loadLocationData(locationData) {
     dvCurrDate.textContent = currDate;
 }
 
+async function getWeatherData(lat, lon) {
+    let tempUnit = "celsius";
+    let windUnit = "kmh";
+    let precipUnit = "mm";
+
+    if (ddlUnits.value === "F") {
+        tempUnit = "fahrenheit";
+        windUnit = "mph";
+        precipUnit = "inch";
+    }
+}
 
 
 
