@@ -28,6 +28,13 @@ function loadLocationData(locationData) {
     let location = locationData[0].address;
     cityName = location.city;
     countryName = location.country_code.toUpperCase();
+
+    let dateOptions = {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+        weekday: "long",
+    };
 }
 
 
