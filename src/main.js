@@ -35,6 +35,11 @@ function loadLocationData(locationData) {
         day: "numeric",
         weekday: "long",
     };
+
+    let currDate = new Intl.DateTimeFormat("en-US", dateOptions).format(new Date());
+
+    dvCityCountry.textContent = `${cityName}, ${countryName}`;
+    dvCurrDate.textContent = currDate;
 }
 
 
