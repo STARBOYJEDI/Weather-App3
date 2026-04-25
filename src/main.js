@@ -115,6 +115,18 @@ function loadDailyForecast() {
     }
 }
 
+function addDailyElement(tag, className, content, weatherCodeName, parentElement, position) {
+    const newElement = document.createElement(tag);
+    newElement.setAttribute("class", className);
+    if (content !== "") {
+        const newContent = document.createTextNode(content);
+        newElement.appendChild(newContent);
+    }
+    if (tag === "img") {
+        newElement.setAttribute("src", `/src/assets/icons-${weatherCodeName}.svg`);
+    }
+}
+
 
 
 
