@@ -95,6 +95,10 @@ function loadDailyForecast() {
             dvForecastDay.removeChild(dvForecastDay.firstChild);
         }
     }
+
+    addDailyElement("p", "daily__daily-title", dayOfWeek, "", dvForecastDay, "afterbegin");
+    addDailyElement("img", "daily__day-icon", "", weatherCodeName, dvForecastDay, "beforeend");
+    addDailyElement("div", "daily__day-temps", "", "", dvForecastDay, "beforeend")
 }
 
 
