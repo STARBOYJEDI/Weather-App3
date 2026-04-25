@@ -304,7 +304,7 @@
       gap: 16px;
       margin-block-end: 20px;
       padding: 40px 24px;
-      background-image: url(/src/assets/icons/bg-today-small.svg);
+      background-image: url(/src/assets/icons/icon-bg-today-small.svg);
       background-repeat: no-repeat;
       background-color: var(--c-blue-700);
       background-size: cover;
@@ -316,7 +316,7 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        background-image: url(/src/assets/icons/bg-today-large.svg);
+        background-image: url(/src/assets/icons/icon-bg-today-large.svg);
         padding-block: 83px;
       }
     }

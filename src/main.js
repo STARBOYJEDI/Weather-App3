@@ -123,7 +123,7 @@ function addDailyElement(tag, className, content, weatherCodeName, parentElement
         newElement.appendChild(newContent);
     }
     if (tag === "img") {
-        newElement.setAttribute("src", `/src/assets/icons-${weatherCodeName}.svg`);
+        newElement.setAttribute("src", `/src/assets/icons/icon-${weatherCodeName}.svg`);
     }
 }
 
