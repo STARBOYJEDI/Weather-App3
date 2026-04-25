@@ -1,5 +1,9 @@
 import "./style.css"
 
+
+
+let cityName, countryName, weatherData;
+
 async function getGeoData() {
     let search = txtSearch.value;
 
