@@ -80,6 +80,22 @@ function loadCurrentWeather() {
     pPrecipitation.textContent = `${weatherData.current.precipitation} ${weatherData.current_units.precipitation.replace("mm", "mm")}`;
 }
 
+function loadDailyForecast() {
+    let daily = weatherData.daily;
+
+    for (let i = 0; i < 7; i++) {
+        let date = new Date(daily.time[i]);
+        let dayOfWeek = new Intl.DateTimeFormat("en-US", { weekday: "short" }).format(date);
+        let dvForecastDay = document.querySelector(`#dvForecastDay${i + 1}`);
+        let weatherCodeName = getWeatherCodeName(daily.weather_code[i]);
+        let dailyHigh = Math.round(daily.temperature_2m_max[i]) + "Â°";
+        let dailyLow = Math.round(daily.temperature_2m_min[i]) + "Â°";
+
+        while (dvForecastDay.firstChild) {
+            dvForecastDay.removeChild(dvForecastDay.firstChild);
+        }
+    }
+}
 
 
 
