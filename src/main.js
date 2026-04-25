@@ -94,13 +94,15 @@ function loadDailyForecast() {
         while (dvForecastDay.firstChild) {
             dvForecastDay.removeChild(dvForecastDay.firstChild);
         }
+
+        addDailyElement("p", "daily__daily-title", dayOfWeek, "", dvForecastDay, "afterbegin");
+        addDailyElement("img", "daily__day-icon", "", weatherCodeName, dvForecastDay, "beforeend");
+        addDailyElement("div", "daily__day-temps", "", "", dvForecastDay, "beforeend");
+
+        let dvDailyTemps = document.querySelector(`#dvForecastDay${i + 1} .daily__day-temps`);
+        addDailyElement("p", "daily__day-high", dailyHigh, "", dvDailyTemps, "afterbegin");
+        addDailyElement("p", "daily__day-low", dailyLow, "", dvDailyTemps, "beforeend");
     }
-
-    addDailyElement("p", "daily__daily-title", dayOfWeek, "", dvForecastDay, "afterbegin");
-    addDailyElement("img", "daily__day-icon", "", weatherCodeName, dvForecastDay, "beforeend");
-    addDailyElement("div", "daily__day-temps", "", "", dvForecastDay, "beforeend");
-
-    let dvDailyTemps = document.querySelector(`#dvForecastDay${i + 1} .daily__day-temps`);
 }
 
 
