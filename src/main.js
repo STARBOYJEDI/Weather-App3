@@ -124,8 +124,28 @@ function addDailyElement(tag, className, content, weatherCodeName, parentElement
     }
     if (tag === "img") {
         newElement.setAttribute("src", `/src/assets/icons/icon-${weatherCodeName}.svg`);
+        newElement.setAttribute("alt", weatherCodeName);
+        newElement.setAttribute("width", "320");
+        newElement.setAttribute("height", "320");
     }
+    parentElement.insertAdjacentElement(position, newElement);
 }
+
+function loadHourlyForecast() {
+    console.log("loadHourlyForecast()");
+    let dayIndex = parseInt(ddlDay.value, 10);
+
+    console.log(`Day ${dayIndex + 1}`);
+    let firstHour = 24 * dayIndex;
+    let lastHour = 24 * (dayIndex + 1) - 1;
+    let weatherCodes = weatherData.hourly.weather_code;
+    let temps = weatherData.hourly.temperature_2m;
+    let hours = weatherData.hourly.time;
+    let id = 1;
+}
+
+
+
 
 
 
