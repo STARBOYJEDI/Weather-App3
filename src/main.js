@@ -45,8 +45,15 @@ async function getGeoData() {
         if (!result.length) {
             throw new Error('No location found.');
         }
+
+        let lat = parseFloat(result[0].lat);
+        let lon = parseFloat(result[0].lon);
+
+        loadLocationData(result);
+        getWeatherData(lat, lon);
+
     } catch (error) {
-        console.error('Error:', error);
+        console.error('Error:', error.message);
     }
 }
 
