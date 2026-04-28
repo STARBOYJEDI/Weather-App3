@@ -142,6 +142,18 @@ function loadHourlyForecast() {
     let temps = weatherData.hourly.temperature_2m;
     let hours = weatherData.hourly.time;
     let id = 1;
+
+    for (let h = firstHour; h <= lastHour; h++) {
+        // console.log(`hour = ${h}`);
+        let weatherCodeName = getWeatherCodeName(weatherCodes[h]);
+        let temp = Math.round(temps[h]) + "Â°";
+        let hour = new Date(hour[h]).toLocaleString("en-US", { hour: "numeric", hour12: true });
+        let dvForecastHour = document.querySelector(`#dvForecastHour${id}`);
+
+        while (dvForecastHour.firstChild) {
+            dvForecastHour.removeChild(dvForecastHour.firstChild);
+        }
+    }
 }
 
 
