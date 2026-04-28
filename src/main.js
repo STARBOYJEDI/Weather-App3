@@ -160,8 +160,19 @@ function loadHourlyForecast() {
         addDailyElement("img", "hourly__hour-icon", "", weatherCodeName, dvForecastHour, "afterbegin");
         addDailyElement("p", "hourly__hour-time", hour, "", dvForecastHour, "beforeend");
         addDailyElement("p", "hourly__hour-temp", temp, "", dvForecastHour, "beforeend");
+
+        id++;
     }
 }
+
+function getHours() {
+    for (let h = 0; h <= 23; h++) {
+        console.log(h);
+    }
+}
+
+
+
 
 
 
