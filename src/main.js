@@ -216,9 +216,23 @@ function populateDayOfWeek() {
         const dayOfWeek = document.createTextNode(currDay);
 
         newOption.setAttribute("class", "hourly__select-day");
+        newOption.setAttribute("value", i);
+        newOption.appendChild(dayOfWeek);
+
+        ddlDay.insertAdjacentElement("beforeend", newOption);
+
+        currDate.setDate(currDate.getDate() + 1);
     }
+
+    console.log(ddlDay);
 }
 
+populateDayOfWeek();
+getGeoData();
+
+btnSearch.addEventListener("click", getGeoData);
+ddlUnits.addEventListener("change", getGeoData);
+ddlDay.addEventListener("change", loadHourlyForecast);
 
 
 
