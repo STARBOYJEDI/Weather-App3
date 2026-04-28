@@ -202,9 +202,9 @@ function getWeatherCodeName(code) {
         0: "clear-day",
         1: "partly-cloudy-day",
         2: "partly-cloudy-day",
-        3: "overcast",
-        45: "fog",
-        48: "fog",
+        3: "cloudy",
+        45: "fog-day",
+        48: "fog-day",
         51: "drizzle",
         53: "drizzle",
         55: "drizzle",
@@ -224,9 +224,9 @@ function getWeatherCodeName(code) {
         77: "snow",
         85: "snow",
         86: "snow",
-        95: "storm",
-        96: "storm",
-        99: "storm",
+        95: "thunderstorms",
+        96: "thunderstorms",
+        99: "thunderstorms",
     };
 
     return weatherCodes[code];
