@@ -207,17 +207,22 @@ function getWeatherCodeName(code) {
 }
 
 function populateDayOfWeek() {
-    let currDate = new Date();
-    let currDay;
-    
-    for (i = 0; i < 7; i++) {
-        currDay = new Intl.DateTimeFormat("en-US", { weekday: "long" }).format(currDate);
-        const newOption = document.createElement("option");
-        const dayOfWeek = document.createTextNode(currDay);
+    const ddlDay = document.getElementById("ddlDay"); // ✅ query it here
 
-        newOption.setAttribute("class", "hourly__select-day");
-        newOption.setAttribute("value", i);
-        newOption.appendChild(dayOfWeek);
+    if (!ddlDay) {
+        console.error("populateDayOfWeek: #ddlDay element not found");
+        return;
+    }
+
+    let currDate = new Date();
+
+    for (let i = 0; i < 7; i++) {
+        const currDay = new Intl.DateTimeFormat("en-US", { weekday: "long" }).format(currDate);
+        const newOption = document.createElement("option");
+
+        newOption.className = "hourly__select-day";
+        newOption.value = i;
+        newOption.textContent = currDay; 
 
         ddlDay.insertAdjacentElement("beforeend", newOption);
 
