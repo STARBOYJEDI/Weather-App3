@@ -1,5 +1,9 @@
-import "./style.css"
+// import "../src/style.css"
 
+const ddlUnits = document.querySelector("#ddlUnits");
+const ddlDay = document.querySelector("#ddlDay");
+const txtSearch = document.querySelector("#txtSearch");
+const btnSearch = document.querySelector("#btnSearch");
 const dvCityCountry = document.querySelector("#dvCityCountry");
 const dvCurrDate = document.querySelector("#dvCurrDate");
 const dvCurrTemp = document.querySelector("#dvCurrTemp");
@@ -11,26 +15,38 @@ const pPrecipitation = document.querySelector("#pPrecipitation");
 let cityName, countryName, weatherData;
 
 async function getGeoData() {
-    let search = txtSearch.value;
+    if (!txtSearch) {
+        console.error('Search input element not found.');
+        return;
+    }
+
+    let search = txtSearch.value.trim();
+
+    if (!search) {
+        console.error('Search input is empty');
+        return;
+    }
 
     const url = `https://nominatim.openstreetmap.org/search?q=${search}&format=jsonv2&addressdetails=1`;
 
     try {
-        const response = await fetch(url);
+        const response = await fetch(url, {
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+            }
+        });
+
         if (!response.ok) {
-            throw new Error(`Response status: ${response.status}`);
+            throw new Error(`HTTP error! status: ${response.status}`);
         }
 
         const result = await response.json();
-        //console.log(result);
 
-        let lat = result[0].lat;
-        let lon = result[0].lon;
-
-        loadLocationData(result);
-        getWeatherData(lat, lon);
+        if (!result.length) {
+            throw new Error('No location found.');
+        }
     } catch (error) {
-        console.error(error.message);
+        console.error('Error:', error);
     }
 }
 
@@ -63,7 +79,7 @@ async function getWeatherData(lat, lon) {
         precipUnit = "inch";
     }
 
-    const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=weather_code,temperature_2m_max,temperature_2m_min&hourly=temperature_2m,weather_code&current=weather_code,temperature_unit=${tempUnit},relative_humidity_2m,apparent_temperature,precipitation_unit=${precipUnit},wind_speed_unit=${windUnite}&past_days=0&forecast_days=7`;
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=weather_code,temperature_2m_max,temperature_2m_min&hourly=temperature_2m,weather_code&current=temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,precipitation,wind_speed_10m&wind_speed_unit=${windUnit}&temperature_unit=${tempUnit}&precipitation_unit=${precipUnit}`;
 
     try {
         const response = await fetch(url);
@@ -147,7 +163,7 @@ function loadHourlyForecast() {
         // console.log(`hour = ${h}`);
         let weatherCodeName = getWeatherCodeName(weatherCodes[h]);
         let temp = Math.round(temps[h]) + "Â°";
-        let hour = new Date(hour[h]).toLocaleString("en-US", { hour: "numeric", hour12: true });
+        let hour = new Date(hours[h]).toLocaleString("en-US", { hour: "numeric", hour12: true });
         let dvForecastHour = document.querySelector(`#dvForecastHour${id}`);
 
         while (dvForecastHour.firstChild) {
@@ -173,9 +189,9 @@ function getHours() {
 
 function getWeatherCodeName(code) {
     const weatherCodes = {
-        0: "sunny",
-        1: "partly-cloudy",
-        2: "partly-cloudy",
+        0: "clear-day",
+        1: "partly-cloudy-day",
+        2: "partly-cloudy-day",
         3: "overcast",
         45: "fog",
         48: "fog",
