@@ -6,7 +6,7 @@
       font-family: 'DM Sans';
       font-style: normal;
       font-weight: 400;
-    src: url('C:\Mbuso\Computer Science\GitHub Projects\Weather App\Assets\fontsdm-sans-v17-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('../src/assets/fonts/bricolage-grotesque-v9-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   /* dm-sans-500 - latin */
   @font-face {
