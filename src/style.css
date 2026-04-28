@@ -14,7 +14,7 @@
       font-family: 'DM Sans';
       font-style: normal;
       font-weight: 500;
-    src: url('C:\Mbuso\Computer Science\GitHub Projects\Weather App\Assets\fontsdm-sans-v17-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('../src/assets/fonts/dm-sans-v17-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   /* dm-sans-600 - latin */
   @font-face {
@@ -22,7 +22,7 @@
       font-family: 'DM Sans';
       font-style: normal;
       font-weight: 600;
-    src: url('C:\Mbuso\Computer Science\GitHub Projects\Weather App\Assets\fontsdm-sans-v17-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('../src/assets/fonts/dm-sans-v17-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   /* dm-sans-600italic - latin */
   @font-face {
@@ -30,7 +30,7 @@
       font-family: 'DM Sans';
       font-style: italic;
       font-weight: 600;
-    src: url('C:\Mbuso\Computer Science\GitHub Projects\Weather App\Assets\fontsdm-sans-v17-latin-600italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('../src/assets/fonts/dm-sans-v17-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   /* dm-sans-700 - latin */
   @font-face {
@@ -38,7 +38,7 @@
       font-family: 'DM Sans';
       font-style: normal;
       font-weight: 700;
-    src: url('C:\Mbuso\Computer Science\GitHub Projects\Weather App\Assets\fontsdm-sans-v17-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('../src/assets/fonts/dm-sans-v17-latin-600italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
 
   /* bricolage-grotesque-700 - latin */
@@ -47,7 +47,7 @@
       font-family: 'Bricolage Grotesque';
       font-style: normal;
       font-weight: 700;
-    src: url('C:\Mbuso\Computer Science\GitHub Projects\Weather App\Assets\fontsbricolage-grotesque-v9-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('../src/assets/fonts/dm-sans-v17-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
 
   :root {
