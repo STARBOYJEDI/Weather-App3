@@ -153,6 +153,13 @@ function loadHourlyForecast() {
         while (dvForecastHour.firstChild) {
             dvForecastHour.removeChild(dvForecastHour.firstChild);
         }
+
+        // console.log(hour, weatherCodeName, temp);
+
+        // console.log(`#dvForecastHour${id}`);
+        addDailyElement("img", "hourly__hour-icon", "", weatherCodeName, dvForecastHour, "afterbegin");
+        addDailyElement("p", "hourly__hour-time", hour, "", dvForecastHour, "beforeend");
+        addDailyElement("p", "hourly__hour-temp", temp, "", dvForecastHour, "beforeend");
     }
 }
 
