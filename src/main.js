@@ -22,8 +22,11 @@ async function getGeoData() {
 
     let search = txtSearch.value.trim();
 
-    if (!search) {
-        console.error('Search input is empty');
+
+    // console.log('Search value:', `"${search}"`);
+
+    if (!search.trim()) {
+        // console.error('Search input is empty');
         return;
     }
 
