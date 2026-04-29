@@ -15,6 +15,14 @@ const currentIcon = document.querySelector(".current__icon");
 const weatherForm = document.querySelector("#weatherForm");
 const searchStatus = document.querySelector("#searchStatus");
 
+const dailyCards = Array.from({ length: 7 }, (_, i) => 
+    document.querySelector(`#dvForecastDay${i + 1}`)
+);
+
+const hourlyCards = Array.from({ length: 24 }, (_, i) =>
+    document.querySelector(`#dvForecastHour${i + 1}`)
+);
+
 let cityName, countryName, weatherData;
 
 // async function getGeoData() {
