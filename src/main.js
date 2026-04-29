@@ -35,6 +35,14 @@ function setStatus(message = "") {
     if (searchStatus) searchStatus.textContent = message;
 }
 
+function setLoading(isLoading) {
+    btnSearch.disabled = isLoading;
+    txtSearch.disabled = isLoading;
+    ddlUnits.disabled = isLoading;
+
+    btnSearch.textContent = isLoading ? "Loading..." : "Search";
+}
+
 let cityName, countryName, weatherData;
 
 // async function getGeoData() {
