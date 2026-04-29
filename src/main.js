@@ -52,7 +52,28 @@ function getCachedResponse(url) {
     return isFresh ? cached.data : null;
 }
 
+async function fetchJson(url, signal) {
+    const cached = getCachedResponse(url);
 
+    if (cached) {
+        return cached;
+    }
+
+    const response = await fetch(url, { signal });
+
+    if (!response.ok) {
+        throw new Error(`Request failed with status ${response.status}.`);
+    }
+
+    const data = await response.json();
+
+    responseCache.set(url, {
+        data,
+        createdAt: Date.now(),
+    });
+
+    return data;
+}
 
 async function getGeoData(event) {
     event?.preventDefault();
