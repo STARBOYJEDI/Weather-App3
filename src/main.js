@@ -75,6 +75,27 @@ async function fetchJson(url, signal) {
     return data;
 }
 
+function getLocationName(locationData) {
+    const address = locationData.address;
+
+    const city =
+        address.city ||
+        address.town ||
+        address.village ||
+        address.hamlet ||
+        address.county ||
+        locationData.display_name.split(",")[0];
+    
+    const country = address.country_code
+        ? address.country_code.toUpperCase()
+        : "";
+
+    return {
+        city,
+        country,
+    };
+}
+
 async function getGeoData(event) {
     event?.preventDefault();
 
