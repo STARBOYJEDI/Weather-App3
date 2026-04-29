@@ -117,27 +117,31 @@ async function getGeoData(event) {
     const geoUrl = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(search)}&format=jsonv2&addressdetails=1`;
 
     try {
-        const response = await fetch(url);
-
-        if (!response.ok) {
-            throw new Error(`Location search failed: ${response.status}`);
-        }
-
-        const result = await response.json();
+        const result = await fetchJson(geoUrl, activeController.signal);
 
         if (!result.length) {
             throw new Error("No matching location found.");
         }
 
-        const lat = parseFloat(result[0].lat);
-        const lon = parseFloat(result[0].lon);
+        const location = result[0];
+        const { city, country } = getLocationName(location);
 
-        loadLocationData(result);
-        await getWeatherData(lat, lon);
+        lastLocation = {
+            lat: parseFloat(location.lat),
+            lon: parseFloat(location.lon),
+            city,
+            country,
+        };
+
+        await getWeatherData(lastLocation.lat, lastLocation.lon);
 
         setStatus("");
     } catch (error) {
-        setStatus(error.message);
+        if (error.name !== "AbortError") {
+            setStatus(error.message);
+        }
+    } finally {
+        setLoading(false);
     }
 }
 
