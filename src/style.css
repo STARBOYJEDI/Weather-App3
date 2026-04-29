@@ -400,7 +400,7 @@
       }
     }
 
-    .daily__daily {
+    .daily__day {
       display: grid;
       justify-items: center;
       gap: 16px;
