@@ -109,9 +109,12 @@ async function getGeoData(event) {
     activeController?.abort();
     activeController = new AbortController();
 
+    setLoading(true);
     setStatus("Searching...");
 
-    const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(search)}&format=jsonv2&addressdetails=1`;
+    // const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(search)}&format=jsonv2&addressdetails=1`;
+
+    const geoUrl = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(search)}&format=jsonv2&addressdetails=1`;
 
     try {
         const response = await fetch(url);
