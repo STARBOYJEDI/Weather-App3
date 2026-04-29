@@ -52,57 +52,7 @@ function getCachedResponse(url) {
     return isFresh ? cached.data : null;
 }
 
-let cityName, countryName, weatherData;
 
-// async function getGeoData() {
-//     if (!txtSearch) {
-//         console.error('Search input element not found.');
-//         return;
-//     }
-
-//     let search = txtSearch.value.trim();
-
-
-//     // console.log('Search value:', `"${search}"`);
-
-//     if (!search.trim()) {
-//         // console.error('Search input is empty');
-//         return;
-//     }
-
-//     const url = `https://nominatim.openstreetmap.org/search?q=${search}&format=jsonv2&addressdetails=1`;
-
-//     try {
-//         const response = await fetch(url, {
-//             headers: {
-//                 // 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
-//             }
-//         });
-
-//         if (!response.ok) {
-//             throw new Error(`HTTP error! status: ${response.status}`);
-//         }
-
-//         const result = await response.json();
-
-//         if (!result.length) {
-//             throw new Error('No location found.');
-//         }
-
-//         let lat = parseFloat(result[0].lat);
-//         let lon = parseFloat(result[0].lon);
-
-//         loadLocationData(result);
-//         getWeatherData(lat, lon);
-
-//     } catch (error) {
-//         console.error('Error:', error.message);
-//     }
-// }
-
-function setStatus(message = "") {
-    searchStatus.textContent = message;
-}
 
 async function getGeoData(event) {
     event?.preventDefault();
