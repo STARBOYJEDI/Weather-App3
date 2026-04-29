@@ -145,23 +145,23 @@ async function getGeoData(event) {
     }
 }
 
-function loadLocationData(locationData) {
-    let location = locationData[0].address;
-    cityName = location.city;
-    countryName = location.country_code.toUpperCase();
+// function loadLocationData(locationData) {
+//     let location = locationData[0].address;
+//     cityName = location.city;
+//     countryName = location.country_code.toUpperCase();
 
-    let dateOptions = {
-        year: "numeric",
-        month: "short",
-        day: "numeric",
-        weekday: "long",
-    };
+//     let dateOptions = {
+//         year: "numeric",
+//         month: "short",
+//         day: "numeric",
+//         weekday: "long",
+//     };
 
-    let currDate = new Intl.DateTimeFormat("en-US", dateOptions).format(new Date());
+//     let currDate = new Intl.DateTimeFormat("en-US", dateOptions).format(new Date());
 
-    dvCityCountry.textContent = `${cityName}, ${countryName}`;
-    dvCurrDate.textContent = currDate;
-}
+//     dvCityCountry.textContent = `${cityName}, ${countryName}`;
+//     dvCurrDate.textContent = currDate;
+// }
 
 async function getWeatherData(lat, lon) {
     let tempUnit = "celsius";
