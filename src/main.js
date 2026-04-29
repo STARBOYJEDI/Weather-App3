@@ -11,6 +11,7 @@ const pFeelsLike = document.querySelector("#pFeelsLike");
 const pHumidity = document.querySelector("#pHumidity");
 const pWind = document.querySelector("#pWind");
 const pPrecipitation = document.querySelector("#pPrecipitation");
+const currentIcon = document.querySelector(".current__icon");
 
 let cityName, countryName, weatherData;
 
