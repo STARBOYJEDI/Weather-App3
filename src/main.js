@@ -12,6 +12,8 @@ const pHumidity = document.querySelector("#pHumidity");
 const pWind = document.querySelector("#pWind");
 const pPrecipitation = document.querySelector("#pPrecipitation");
 const currentIcon = document.querySelector(".current__icon");
+const weatherForm = document.querySelector("#weatherForm");
+const searchStatus = document.querySelector("#searchStatus");
 
 let cityName, countryName, weatherData;
 
