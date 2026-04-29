@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather-app3</title>
+    <title>Weather Now</title>
     <link rel="stylesheet" href="/src/style.css">
     <script type="module" src="/src/main.js"></script>
     <!-- <script src="/src/main.js" defer></script> -->
@@ -13,17 +13,24 @@
     <header class="header wrapper">
       <div class="header__content">
         <a class="header__homelink" href="/">
-          <img class="header__logo" src="/src/assets/icons/icon-logo.svg" alt="Weather Now Home" width="197" height="40">
+          <img 
+            class="header__logo" 
+            src="/src/assets/icons/icon-logo.svg" 
+            alt="Weather Now Home" 
+            width="197" 
+            height="40"
+          />
         </a>
+
         <label class="visually-hidden" for="ddlUnits">Temperature units</label>
-        <select class="dropdown header__dropdown" name="units" id="ddlUnits"></select>
+        <select class="dropdown header__dropdown" name="units" id="ddlUnits">
           <!-- <option value="">Units</option> -->
           <option value="C">&deg;C</option>
           <option value="F">&deg;F</option>
         </select>
       </div>
-
     </header>
+
     <main id="main" class="main wrapper">
       <section class="hero">
         <div class="hero__content">
@@ -31,13 +38,20 @@
 
           <form class="hero__search" id="weatherForm" role="search">
             <label class="visually-hidden" for="txtSearch">Search for a place</label>
-            <input class="hero__textbox" type="text" id="txtSearch" placeholder="Search for a place..." autocomplete="off">
+            <input 
+              class="hero__textbox" 
+              type="text" 
+              id="txtSearch" 
+              placeholder="Search for a place..." 
+              autocomplete="off"
+            />
             <button id="btnSearch" class="hero__button" type="submit">Search</button>
           </form>
 
           <p id="searchStatus" class="search-status" aria-live="polite"></p>
         </div>
       </section>
+
       <div class="dashboard">
         <section class="current">
           <h2 class="visually-hidden">Current Location Temperature</h2>
@@ -47,8 +61,15 @@
               <div id="dvCityCountry" class="current__city"></div>
               <div id="dvCurrDate" class="current__date"></div>
             </div>
+
             <div class="current__info">
-              <img class="current__icon" src="/src/assets/icons/icon-clear-day.svg" alt="" width="320" height="320">
+              <img 
+                class="current__icon" 
+                src="/src/assets/icons/icon-clear-day.svg" 
+                alt="" 
+                width="320" 
+                height="320"
+              />
               <div class="current__temp"><span id="dvCurrTemp">--</span>&deg;</div>
             </div>
           </div>
@@ -58,24 +79,27 @@
               <p class="current__condition-title">Feels Like</p>
               <p class="current__condition-value"><span id="pFeelsLike">--</span>&deg;</p>
             </div>
+
             <div class="block current__condition">
               <p class="current__condition-title">Humidity</p>
               <p class="current__condition-value"><span id="pHumidity">--</span>%</p>
             </div>
+
             <div class="block current__condition">
               <p class="current__condition-title">Wind</p>
               <p id="pWind" class="current__condition-value">--</p>
             </div>
+
             <div class="block current__condition">
               <p class="current__condition-title">Precipitation</p>
               <p id="pPrecipitation" class="current__condition-value">--</p>
             </div>
           </div>
-
         </section>
 
         <section class="daily">
           <h2 class="section__title daily__title">Daily forecast</h2>
+
           <div class="daily__forecast">
             <div id="dvForecastDay1" class="block daily__day"></div>
             <div id="dvForecastDay2" class="block daily__day"></div>
@@ -88,7 +112,6 @@
         </section>
 
         <section class="hourly">
-
           <div class="hourly__content">
             <div class="hourly__header">
               <h2 class="section__title hourly__title">Hourly forecast</h2>

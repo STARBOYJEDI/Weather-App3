@@ -228,11 +228,13 @@
     }
 
     .header__dropdown {
+      width: auto;
+      min-width: 80px;
       max-width: 10ch;
       background-image: url("/src/assets/icons/icon-units.svg");
       background-repeat: no-repeat;
-      background-position: 16px center;
-      padding: 12px 40px;
+      background-position: 14px center;
+      padding: 12px 36px 12px 40px;
     }
   }
 
