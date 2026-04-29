@@ -23,6 +23,18 @@ const hourlyCards = Array.from({ length: 24 }, (_, i) =>
     document.querySelector(`#dvForecastHour${i + 1}`)
 );
 
+const CACHE_DURATION = 10 * 60 * 1000;
+const DEFAULT_LOCATION = "Johannesburg";
+
+let weatherData = null;
+let lastLocation = null;
+let activeController = null;
+const responseCache = new Map();
+
+function setStatus(message = "") {
+    if (searchStatus) searchStatus.textContent = message;
+}
+
 let cityName, countryName, weatherData;
 
 // async function getGeoData() {
