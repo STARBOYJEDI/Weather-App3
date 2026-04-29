@@ -67,6 +67,45 @@ function setStatus(message = "") {
     searchStatus.textContent = message;
 }
 
+async function getGeoData(event) {
+    event?.preventDefault();
+
+    const search = txtSearch.value.trim();
+
+    if (!search) {
+        setStatus("Enter a city or place to check the weather.");
+        return;
+    }
+
+    setStatus("Searching...");
+
+    const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(search)}&format=jsonv2&addressdetails=1`;
+
+    try {
+        const response = await fetch(url);
+
+        if (!response.ok) {
+            throw new Error(`Location search failed: ${response.status}`);
+        }
+
+        const result = await response.json();
+
+        if (!result.length) {
+            throw new Error("No matching location found.");
+        }
+
+        const lat = parseFloat(result[0].lat);
+        const lon = parseFloat(result[0].lon);
+
+        loadLocationData(result);
+        await getWeatherData(lat, lon);
+
+        setStatus("");
+    } catch (error) {
+        setStatus(error.message);
+    }
+}
+
 function loadLocationData(locationData) {
     let location = locationData[0].address;
     cityName = location.city;
