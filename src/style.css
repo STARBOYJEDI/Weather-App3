@@ -494,7 +494,7 @@
       height: auto;
     }
 
-    .hour__hour-time {
+    .hourly__hour-time {
       font-size: var(--font-size-forecast-hour);
     }
 
