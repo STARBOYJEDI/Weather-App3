@@ -505,6 +505,13 @@
   }
 }
 
+.search-status {
+  margin-block-start: 12px;
+  min-height: 1.4rem;
+  color: var(--color-text-med-light);
+  text-align: center;
+  font-size: var(--fs-14);
+}
 
 
 
