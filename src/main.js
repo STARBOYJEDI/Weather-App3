@@ -124,8 +124,8 @@ function loadDailyForecast() {
         let dayOfWeek = new Intl.DateTimeFormat("en-US", { weekday: "short" }).format(date);
         let dvForecastDay = document.querySelector(`#dvForecastDay${i + 1}`);
         let weatherCodeName = getWeatherCodeName(daily.weather_code[i]);
-        let dailyHigh = Math.round(daily.temperature_2m_max[i]) + "Â°";
-        let dailyLow = Math.round(daily.temperature_2m_min[i]) + "Â°";
+        let dailyHigh = Math.round(daily.temperature_2m_max[i]) + "°";
+        let dailyLow = Math.round(daily.temperature_2m_min[i]) + "°";
 
         while (dvForecastDay.firstChild) {
             dvForecastDay.removeChild(dvForecastDay.firstChild);
