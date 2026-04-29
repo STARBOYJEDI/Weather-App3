@@ -43,6 +43,15 @@ function setLoading(isLoading) {
     btnSearch.textContent = isLoading ? "Loading..." : "Search";
 }
 
+function getCachedResponse(url) {
+    const cached = responseCache.get(url);
+
+    if (!cached) return null;
+
+    const isFresh = Date.now() - cached.createdAt < CACHE_DURATION;
+    return isFresh ? cached.data : null;
+}
+
 let cityName, countryName, weatherData;
 
 // async function getGeoData() {
