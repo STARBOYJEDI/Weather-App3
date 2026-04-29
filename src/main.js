@@ -35,7 +35,7 @@ async function getGeoData() {
     try {
         const response = await fetch(url, {
             headers: {
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+                // 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
             }
         });
 
@@ -172,7 +172,7 @@ function loadHourlyForecast() {
     for (let h = firstHour; h <= lastHour; h++) {
         // console.log(`hour = ${h}`);
         let weatherCodeName = getWeatherCodeName(weatherCodes[h]);
-        let temp = Math.round(temps[h]) + "Â°";
+        let temp = Math.round(temps[h]) + "°";
         let hour = new Date(hours[h]).toLocaleString("en-US", { hour: "numeric", hour12: true });
         let dvForecastHour = document.querySelector(`#dvForecastHour${id}`);
 
