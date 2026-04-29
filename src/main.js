@@ -106,6 +106,9 @@ async function getGeoData(event) {
         return;
     }
 
+    activeController?.abort();
+    activeController = new AbortController();
+
     setStatus("Searching...");
 
     const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(search)}&format=jsonv2&addressdetails=1`;
