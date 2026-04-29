@@ -110,11 +110,15 @@ async function getWeatherData(lat, lon) {
 }
 
 function loadCurrentWeather() {
+    const weatherCodeName = getWeatherCodeName(weatherData.current.weather_code);
+
     dvCurrTemp.textContent = Math.round(weatherData.current.temperature_2m);
     pFeelsLike.textContent = Math.round(weatherData.current.apparent_temperature);
     pHumidity.textContent = weatherData.current.relative_humidity_2m;
     pWind.textContent = `${weatherData.current.wind_speed_10m} ${weatherData.current_units.wind_speed_10m.replace("km/h", "kmh")}`;
-    pPrecipitation.textContent = `${weatherData.current.precipitation} ${weatherData.current_units.precipitation.replace("mm", "mm")}`;
+    pPrecipitation.textContent = `${weatherData.current.precipitation} ${weatherData.current_units.precipitation}`;
+
+    currentIcon.src = `/src/assets/icons/icon-${weatherCodeName}.svg`;
 }
 
 function loadDailyForecast() {
