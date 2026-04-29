@@ -25,22 +25,18 @@
 
     </header>
     <main id="main" class="main wrapper">
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="hero__content">
           <h1 class="hero__title">How's the sky looking today?</h1>
 
-          <div class="hero__search">
-            <input class="hero__textbox" type="text" name="search" id="txtSearch" placeholder="Search for a place...">
+          <form class="hero__search" id="weatherForm" role="search">
+            <label class="visually-hidden" for="txtSearch">Search for a place</label>
+            <input class="hero__textbox" type="text" id="txtSearch" placeholder="Search for a place...">
             <button id="btnSearch" class="hero__button" type="submit">Search</button>
-          </div>
+          </form>
         </div>
-      </section> -->
+      </section>
 
-      <form class="hero__search" id="weatherForm" role="search">
-        <label class="visually-hidden" for="txtSearch">Search for a place</label>
-        <input class="hero__textbox" type="text" id="txtSearch" placeholder="Search for a place...">
-        <button id="btnSearch" class="hero__button" type="submit">Search</button>
-      </form>
       <p id="searchStatus" class="search-status" aria-live="polite"></p>
       <div class="dashboard">
         <section class="current">
