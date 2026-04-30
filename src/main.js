@@ -164,9 +164,10 @@ async function getGeoData(event) {
 // }
 
 async function getWeatherData(lat, lon) {
-    let tempUnit = "celsius";
-    let windUnit = "kmh";
-    let precipUnit = "mm";
+    const isFahrenheit = ddlUnits.value === "F";
+    const tempUnit = isFahrenheit ? "fahrenheit" : "celsius";
+    const windUnit = isFahrenheit ? "mph" : "kmh";
+    const precipUnit = isFahrenheit ? "inch" : "mm";
 
     if (ddlUnits.value === "F") {
         tempUnit = "fahrenheit";
