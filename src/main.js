@@ -196,28 +196,15 @@ function loadCurrentWeather() {
 }
 
 function loadDailyForecast() {
-    let daily = weatherData.daily;
+    const daily = weatherData.daily;
 
-    for (let i = 0; i < 7; i++) {
-        let date = new Date(daily.time[i]);
-        let dayOfWeek = new Intl.DateTimeFormat("en-US", { weekday: "short" }).format(date);
-        let dvForecastDay = document.querySelector(`#dvForecastDay${i + 1}`);
-        let weatherCodeName = getWeatherCodeName(daily.weather_code[i]);
-        let dailyHigh = Math.round(daily.temperature_2m_max[i]) + "°";
-        let dailyLow = Math.round(daily.temperature_2m_min[i]) + "°";
-
-        while (dvForecastDay.firstChild) {
-            dvForecastDay.removeChild(dvForecastDay.firstChild);
-        }
-
-        addDailyElement("p", "daily__daily-title", dayOfWeek, "", dvForecastDay, "afterbegin");
-        addDailyElement("img", "daily__day-icon", "", weatherCodeName, dvForecastDay, "beforeend");
-        addDailyElement("div", "daily__day-temps", "", "", dvForecastDay, "beforeend");
-
-        let dvDailyTemps = document.querySelector(`#dvForecastDay${i + 1} .daily__day-temps`);
-        addDailyElement("p", "daily__day-high", dailyHigh, "", dvDailyTemps, "afterbegin");
-        addDailyElement("p", "daily__day-low", dailyLow, "", dvDailyTemps, "beforeend");
-    }
+    dailyCards.forEach((card, index) => {
+        const date = new Date(daily.time[index]);
+        const dayOfWeek = new Intl.DateTimeFormat("en-US", {
+            weekday: "short",
+            timeZone: weatherData.timezone,
+        }).format(date);
+    })
 }
 
 function addDailyElement(tag, className, content, weatherCodeName, parentElement, position) {
