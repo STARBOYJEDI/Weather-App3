@@ -337,12 +337,13 @@ function populateDayOfWeek() {
 }
 
 populateDayOfWeek();
-getGeoData();
 
-btnSearch.addEventListener("click", getGeoData);
-ddlUnits.addEventListener("change", getGeoData);
-ddlDay.addEventListener("change", loadHourlyForecast);
 weatherForm.addEventListener("submit", getGeoData);
+ddlUnits.addEventListener("change", reloadLastLocationWeather);
+ddlDay.addEventListener("change", loadHourlyForecast);
+
+txtSearch.value = DEFAULT_LOCATION;
+getGeoData();
 
 
 
