@@ -181,15 +181,18 @@ function loadLocationData() {
 }
 
 function loadCurrentWeather() {
-    const weatherCodeName = getWeatherCodeName(weatherData.current.weather_code);
+    const current = weatherData.current;
+    const units = weatherData.current_units;
+    const weatherCodeName = getWeatherCodeName(current.weather_code);
 
-    dvCurrTemp.textContent = Math.round(weatherData.current.temperature_2m);
-    pFeelsLike.textContent = Math.round(weatherData.current.apparent_temperature);
-    pHumidity.textContent = weatherData.current.relative_humidity_2m;
-    pWind.textContent = `${weatherData.current.wind_speed_10m} ${weatherData.current_units.wind_speed_10m.replace("km/h", "kmh")}`;
-    pPrecipitation.textContent = `${weatherData.current.precipitation} ${weatherData.current_units.precipitation}`;
+    dvCurrTemp.textContent = Math.round(current.current.temperature_2m);
+    pFeelsLike.textContent = Math.round(current.apparent_temperature);
+    pHumidity.textContent = current.relative_humidity_2m;
+    pWind.textContent = `${current.wind_speed_10m} ${units.wind_speed_10m.replace("km/h", "kmh")}`;
+    pPrecipitation.textContent = `${current.precipitation} ${units.precipitation}`;
 
     currentIcon.src = `/src/assets/icons/icon-${weatherCodeName}.svg`;
+    currentIcon.alt = weatherCodeName.replaceAll("-", " ");
 }
 
 function loadDailyForecast() {
