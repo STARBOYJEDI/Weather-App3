@@ -265,7 +265,19 @@ function createElement(tag, className, text = "") {
     }
 
     return element;
-} 
+}
+
+function createWeatherIcon(className, weatherCodeName) {
+    const icon = document.createElement("img");
+
+    icon.className = className;
+    icon.src = `/src/assets/icons/icon-${weatherCodeName}.svg`;
+    icon.alt = weatherCodeName.replaceAll("-", " ");
+    icon.width = 320;
+    icon.height = 320;
+
+    return icon;
+}
 
 function getWeatherCodeName(code) {
     const weatherCodes = {
