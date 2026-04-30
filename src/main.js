@@ -224,40 +224,16 @@ function loadDailyForecast() {
     });
 }
 
-
-
 function loadHourlyForecast() {
-    console.log("loadHourlyForecast()");
-    let dayIndex = parseInt(ddlDay.value, 10);
+    if (!weatherData) return;
 
-    console.log(`Day ${dayIndex + 1}`);
-    let firstHour = 24 * dayIndex;
-    let lastHour = 24 * (dayIndex + 1) - 1;
-    let weatherCodes = weatherData.hourly.weather_code;
-    let temps = weatherData.hourly.temperature_2m;
-    let hours = weatherData.hourly.time;
-    let id = 1;
+    const dayIndex = parseInt(ddlDay.value, 10) || 0;
+    const firstHour = 24 * dayIndex;
+    const lastHour = 24 * (dayIndex + 1);
 
-    for (let h = firstHour; h <= lastHour; h++) {
-        // console.log(`hour = ${h}`);
-        let weatherCodeName = getWeatherCodeName(weatherCodes[h]);
-        let temp = Math.round(temps[h]) + "°";
-        let hour = new Date(hours[h]).toLocaleString("en-US", { hour: "numeric", hour12: true });
-        let dvForecastHour = document.querySelector(`#dvForecastHour${id}`);
-
-        while (dvForecastHour.firstChild) {
-            dvForecastHour.removeChild(dvForecastHour.firstChild);
-        }
-
-        // console.log(hour, weatherCodeName, temp);
-
-        // console.log(`#dvForecastHour${id}`);
-        addDailyElement("img", "hourly__hour-icon", "", weatherCodeName, dvForecastHour, "afterbegin");
-        addDailyElement("p", "hourly__hour-time", hour, "", dvForecastHour, "beforeend");
-        addDailyElement("p", "hourly__hour-temp", temp, "", dvForecastHour, "beforeend");
-
-        id++;
-    }
+    const weatherCodes = weatherData.hourly.weather_code;
+    const temps = weatherData.hourly.temperature_2m;
+    const hours = weatherData.hourly.time;
 }
 
 function getHours() {
