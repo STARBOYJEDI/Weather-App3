@@ -328,6 +328,11 @@ function populateDayOfWeek() {
         }).format(optionDate);
 
         const option = document.createElement("option");
+        option.className = "hourly__select-day";
+        option.value = i;
+        option.textContent = dayName;
+
+        ddlDay.append(option);
     }
 }
 
