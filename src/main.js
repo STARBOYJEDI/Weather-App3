@@ -206,20 +206,22 @@ function loadDailyForecast() {
             weekday: "short",
             timeZone: weatherData.timezone,
         }).format(date);
-    })
 
-    const weatherCodeName = getWeatherCodeName(daily.weather_code[index]);
-    const high = `${Math.round(daily.temperature_2m_max[index])}°`;
-    const low = `${Math.round(daily.temperature_2m_min[index])}°`;
+        const weatherCodeName = getWeatherCodeName(daily.weather_code[index]);
+        const high = `${Math.round(daily.temperature_2m_max[index])}°`;
+        const low = `${Math.round(daily.temperature_2m_min[index])}°`;
 
-    const title = createElement("p", "daily__daily-title", dayOfWeek);
-    const icon = createWeatherIcon("daily__day-icon", weatherCodeName);
-    const temps = createElement("div", "daily__day-temps");
+        const title = createElement("p", "daily__daily-title", dayOfWeek);
+        const icon = createWeatherIcon("daily__day-icon", weatherCodeName);
+        const temps = createElement("div", "daily__day-temps");
 
-    temps.append(
-        createElement("p", "daily__day-temp-high", high),
-        createElement("p", "daily__day-temp-low", low)
-    );
+        temps.append(
+            createElement("p", "daily__day-temp-high", high),
+            createElement("p", "daily__day-temp-low", low)
+        );
+
+        card.replaceChildren(title, icon, temps);
+    });
 }
 
 function addDailyElement(tag, className, content, weatherCodeName, parentElement, position) {
