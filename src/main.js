@@ -175,6 +175,9 @@ function loadLocationData() {
     const currDate = new Intl.DateTimeFormat("en-US", dateOptions).format(
         new Date()
     );
+
+    dvCityCountry.textContent = `${lastLocation.city}, ${lastLocation.country}`;
+    dvCurrDate.textContent = currDate;
 }
 
 function loadCurrentWeather() {
