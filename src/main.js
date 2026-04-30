@@ -247,7 +247,13 @@ function loadHourlyForecast() {
             hour12: true,
             timeZone: weatherData.timezone,
         });
-    })
+
+        card.replaceChildren(
+            createWeatherIcon("hourly__hour-icon", weatherCodeName),
+            createElement("p", "hourly__hour-time", hour),
+            createElement("p", "hourly__hour-temp", temp)
+        );
+    });
 }
 
 function getHours() {
