@@ -1,5 +1,7 @@
 // import "../src/style.css"
 
+const { createElement } = require("react");
+
 const ddlUnits = document.querySelector("#ddlUnits");
 const ddlDay = document.querySelector("#ddlDay");
 const txtSearch = document.querySelector("#txtSearch");
@@ -205,6 +207,19 @@ function loadDailyForecast() {
             timeZone: weatherData.timezone,
         }).format(date);
     })
+
+    const weatherCodeName = getWeatherCodeName(daily.weather_code[index]);
+    const high = `${Math.round(daily.temperature_2m_max[index])}°`;
+    const low = `${Math.round(daily.temperature_2m_min[index])}°`;
+
+    const title = createElement("p", "daily__daily-title", dayOfWeek);
+    const icon = createWeatherIcon("daily__day-icon", weatherCodeName);
+    const temps = createElement("div", "daily__day-temps");
+
+    temps.append(
+        createElement("p", "daily__day-temp-high", high),
+        createElement("p", "daily__day-temp-low", low)
+    );
 }
 
 function addDailyElement(tag, className, content, weatherCodeName, parentElement, position) {
