@@ -352,7 +352,7 @@
     .current__temp {
       font-size: var(--font-size-temp);
       line-height: 1;
-      letter-spacing: -2%;
+      letter-spacing: -0.04em;
       font-weight: 600;
       font-style: italic;
     }
