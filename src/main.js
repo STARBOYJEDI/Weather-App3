@@ -234,6 +234,20 @@ function loadHourlyForecast() {
     const weatherCodes = weatherData.hourly.weather_code;
     const temps = weatherData.hourly.temperature_2m;
     const hours = weatherData.hourly.time;
+
+    hourlyCards.forEach((card, index) => {
+        const hourIndex = firstHour + index;
+
+        if (hourIndex >= lastHour) return;
+
+        const weatherCodeName = getWeatherCodeName(weatherCodes[hourIndex]);
+        const temp = `${Math.round(temps[hourIndex])}°`;
+        const hour = new Date(hours[hourIndex]).toLocaleString("en-US", {
+            hour: "numeric",
+            hour12: true,
+            timeZone: weatherData.timezone,
+        });
+    })
 }
 
 function getHours() {
