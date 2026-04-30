@@ -286,15 +286,10 @@ function getWeatherCodeName(code, isDay = 1) {
         2: isDay ? "partly-cloudy-day" : "partly-cloudy-night",
         45: isDay ? "fog-day" : "fog-night",
         48: isDay ? "fog-day" : "fog-night",
-    }
+    };
 
     const weatherCodes = {
-        0: "clear-day",
-        1: "partly-cloudy-day",
-        2: "partly-cloudy-day",
         3: "cloudy",
-        45: "fog-day",
-        48: "fog-day",
         51: "drizzle",
         53: "drizzle",
         55: "drizzle",
@@ -319,7 +314,7 @@ function getWeatherCodeName(code, isDay = 1) {
         99: "thunderstorms",
     };
 
-    return weatherCodes[code] || "clear-day";
+    return dayNightCodes[codes] || weatherCodes[code] || "clear-day";
 }
 
 function populateDayOfWeek() {
