@@ -256,11 +256,16 @@ function loadHourlyForecast() {
     });
 }
 
-function getHours() {
-    for (let h = 0; h <= 23; h++) {
-        console.log(h);
+function createElement(tag, className, text = "") {
+    const element = document.createElement(tag);
+    element.className = className;
+
+    if (text) {
+        element.textContent = text;
     }
-}
+
+    return element;
+} 
 
 function getWeatherCodeName(code) {
     const weatherCodes = {
