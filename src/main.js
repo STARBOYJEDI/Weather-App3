@@ -311,7 +311,7 @@ function getWeatherCodeName(code) {
         99: "thunderstorms",
     };
 
-    return weatherCodes[code];
+    return weatherCodes[code] || "clear-day";
 }
 
 function populateDayOfWeek() {
