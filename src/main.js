@@ -1,7 +1,5 @@
 // import "../src/style.css"
 
-const { createElement } = require("react");
-
 const ddlUnits = document.querySelector("#ddlUnits");
 const ddlDay = document.querySelector("#ddlDay");
 const txtSearch = document.querySelector("#txtSearch");
@@ -171,7 +169,7 @@ function loadLocationData() {
         month: "short",
         day: "numeric",
         weekday: "long",
-        timezone: weatherData.timezone,
+        timeZone: weatherData.timezone,
     };
 
     const currDate = new Intl.DateTimeFormat("en-US", dateOptions).format(
@@ -187,7 +185,7 @@ function loadCurrentWeather() {
     const units = weatherData.current_units;
     const weatherCodeName = getWeatherCodeName(current.weather_code);
 
-    dvCurrTemp.textContent = Math.round(current.current.temperature_2m);
+    dvCurrTemp.textContent = Math.round(current.temperature_2m);
     pFeelsLike.textContent = Math.round(current.apparent_temperature);
     pHumidity.textContent = current.relative_humidity_2m;
     pWind.textContent = `${current.wind_speed_10m} ${units.wind_speed_10m.replace("km/h", "kmh")}`;
@@ -216,8 +214,8 @@ function loadDailyForecast() {
         const temps = createElement("div", "daily__day-temps");
 
         temps.append(
-            createElement("p", "daily__day-temp-high", high),
-            createElement("p", "daily__day-temp-low", low)
+            createElement("p", "daily__day-high", high),
+            createElement("p", "daily__day-low", low)
         );
 
         card.replaceChildren(title, icon, temps);
