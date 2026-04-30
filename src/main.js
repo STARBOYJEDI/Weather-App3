@@ -224,21 +224,7 @@ function loadDailyForecast() {
     });
 }
 
-function addDailyElement(tag, className, content, weatherCodeName, parentElement, position) {
-    const newElement = document.createElement(tag);
-    newElement.setAttribute("class", className);
-    if (content !== "") {
-        const newContent = document.createTextNode(content);
-        newElement.appendChild(newContent);
-    }
-    if (tag === "img") {
-        newElement.setAttribute("src", `/src/assets/icons/icon-${weatherCodeName}.svg`);
-        newElement.setAttribute("alt", weatherCodeName);
-        newElement.setAttribute("width", "320");
-        newElement.setAttribute("height", "320");
-    }
-    parentElement.insertAdjacentElement(position, newElement);
-}
+
 
 function loadHourlyForecast() {
     console.log("loadHourlyForecast()");
