@@ -185,7 +185,7 @@ function loadLocationData() {
 function loadCurrentWeather() {
     const current = weatherData.current;
     const units = weatherData.current_units;
-    const weatherCodeName = getWeatherCodeName(current.weather_code);
+    const weatherCodeName = getWeatherCodeName(current.weather_code, current.is_day);
 
     dvCurrTemp.textContent = Math.round(current.temperature_2m);
     pFeelsLike.textContent = Math.round(current.apparent_temperature);
@@ -240,7 +240,8 @@ function loadHourlyForecast() {
 
         if (hourIndex >= lastHour) return;
 
-        const weatherCodeName = getWeatherCodeName(weatherCodes[hourIndex]);
+        const isDay = weatherData.hourly.is_daily[hourIndex];
+        const weatherCodeName = getWeatherCodeName(weatherCodes[hourIndex], isDay);
         const temp = `${Math.round(temps[hourIndex])}°`;
         const hour = new Date(hours[hourIndex]).toLocaleString("en-US", {
             hour: "numeric",
