@@ -211,7 +211,7 @@ function loadDailyForecast() {
         const high = `${Math.round(daily.temperature_2m_max[index])}°`;
         const low = `${Math.round(daily.temperature_2m_min[index])}°`;
 
-        const title = createElement("p", "daily__daily-title", dayOfWeek);
+        const title = createElement("p", "daily__day-title", dayOfWeek);
         const icon = createWeatherIcon("daily__day-icon", weatherCodeName);
         const temps = createElement("div", "daily__day-temps");
 
@@ -240,7 +240,7 @@ function loadHourlyForecast() {
 
         if (hourIndex >= lastHour) return;
 
-        const isDay = weatherData.hourly.is_daily[hourIndex];
+        const isDay = weatherData.hourly.is_day[hourIndex];
         const weatherCodeName = getWeatherCodeName(weatherCodes[hourIndex], isDay);
         const temp = `${Math.round(temps[hourIndex])}°`;
         const hour = new Date(hours[hourIndex]).toLocaleString("en-US", {
@@ -315,7 +315,7 @@ function getWeatherCodeName(code, isDay = 1) {
         99: "thunderstorms",
     };
 
-    return dayNightCodes[codes] || weatherCodes[code] || "clear-day";
+    return dayNightCodes[code] || weatherCodes[code] || "clear-day";
 }
 
 function populateDayOfWeek() {
