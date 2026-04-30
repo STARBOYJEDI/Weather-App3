@@ -163,6 +163,20 @@ async function getWeatherData(lat, lon) {
     loadHourlyForecast();
 }
 
+function loadLocationData() {
+    const dateOptions = {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+        weekday: "long",
+        timezone: weatherData.timezone,
+    };
+
+    const currDate = new Intl.DateTimeFormat("en-US", dateOptions).format(
+        new Date()
+    );
+}
+
 function loadCurrentWeather() {
     const weatherCodeName = getWeatherCodeName(weatherData.current.weather_code);
 
