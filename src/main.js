@@ -336,6 +336,27 @@ function populateDayOfWeek() {
     }
 }
 
+async function reloadLastLocationWeather() {
+    if (!lastLocation) return;
+
+    activeController?.abort();
+    activeController = new AbortController();
+
+    setLoading(true);
+    setStatus("Updating units...");
+
+    try {
+        await getWeatherData(lastLocation.lat, lastLocation.lon);
+        setStatus("");
+    } catch (error) {
+        if (error.name !== "AbortError") {
+            setStatus(error.message);
+        }
+    } finally {
+        setLoading(false);
+    }
+}
+
 populateDayOfWeek();
 
 weatherForm.addEventListener("submit", getGeoData);
