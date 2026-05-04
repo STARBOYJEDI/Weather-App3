@@ -193,7 +193,7 @@ function loadCurrentWeather() {
     pWind.textContent = `${current.wind_speed_10m} ${units.wind_speed_10m.replace("km/h", "kmh")}`;
     pPrecipitation.textContent = `${current.precipitation} ${units.precipitation}`;
 
-    currentIcon.src = `/src/assets/icons/icon-${weatherCodeName}.svg`;
+    currentIcon.src = `/public/assets/icons/icon-${weatherCodeName}.svg`;
     currentIcon.alt = weatherCodeName.replaceAll("-", " ");
 }
 
@@ -272,7 +272,7 @@ function createWeatherIcon(className, weatherCodeName) {
     const icon = document.createElement("img");
 
     icon.className = className;
-    icon.src = `/src/assets/icons/icon-${weatherCodeName}.svg`;
+    icon.src = `/public/assets/icons/icon-${weatherCodeName}.svg`;
     icon.alt = weatherCodeName.replaceAll("-", " ");
     icon.width = 320;
     icon.height = 320;
