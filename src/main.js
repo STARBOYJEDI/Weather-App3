@@ -272,7 +272,7 @@ function createWeatherIcon(className, weatherCodeName) {
     const icon = document.createElement("img");
 
     icon.className = className;
-    icon.src = `/public/assets/icons/icon-${weatherCodeName}.svg`;
+    icon.src = `/assets/icons/icon-${weatherCodeName}.svg`;
     icon.alt = weatherCodeName.replaceAll("-", " ");
     icon.width = 320;
     icon.height = 320;
