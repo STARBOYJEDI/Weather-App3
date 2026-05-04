@@ -193,7 +193,7 @@ function loadCurrentWeather() {
     pWind.textContent = `${current.wind_speed_10m} ${units.wind_speed_10m.replace("km/h", "kmh")}`;
     pPrecipitation.textContent = `${current.precipitation} ${units.precipitation}`;
 
-    currentIcon.src = `/public/assets/icons/icon-${weatherCodeName}.svg`;
+    currentIcon.src = `/assets/icons/icon-${weatherCodeName}.svg`;
     currentIcon.alt = weatherCodeName.replaceAll("-", " ");
 }
 
