@@ -24,7 +24,7 @@ const hourlyCards = Array.from({ length: 24 }, (_, i) =>
 );
 
 const CACHE_DURATION = 10 * 60 * 1000;
-const DEFAULT_LOCATION = "Johannesburg";
+// const DEFAULT_LOCATION = "Johannesburg";
 
 let weatherData = null;
 let lastLocation = null;
@@ -367,8 +367,8 @@ weatherForm.addEventListener("submit", getGeoData);
 ddlUnits.addEventListener("change", reloadLastLocationWeather);
 ddlDay.addEventListener("change", loadHourlyForecast);
 
-txtSearch.value = DEFAULT_LOCATION;
-getGeoData();
+txtSearch.value = "";
+setStatus("");
 
 
 
