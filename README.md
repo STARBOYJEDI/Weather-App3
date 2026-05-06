@@ -40,3 +40,5 @@ This project uses Nominatim to convert a searched place into latitude and longit
 
 It then uses Open-Meteo to fetch current weather, daily forecast data, hourly forecast data, unit-specific readings, and day/night information for more accurate weather icons.
 
+## Live Website
+https://weathernow99.netlify.app/
